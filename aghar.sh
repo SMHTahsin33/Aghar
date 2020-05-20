@@ -16,7 +16,7 @@ echo "      /____/                    "
 echo -e "${STOP}"
 echo -e "${Cyan}"
 echo "[*] A Tool for Active, Passive and Permuted Subdomain Enumeration"
-echo "[*] Coded By Mehedi Hasan Remon (@mehedi1194)"
+echo "[*] Author Mehedi Hasan Remon (@mehedi1194)"
 echo -e "${STOP}"
 #INTRO ENDS
 echo "  "
@@ -32,7 +32,7 @@ sed s/.$// $tfile.CNAME3 | sort -u > $tfile.CNAME
 
 echo " "
 echo -e "${Gcyan}[*] Doing Active Enumeration${STOP}"
-python ~/Tool/massdns/scripts/subbrute.py ~/Desktop/all2.txt $1 >> $1.subbrute  # set the path of subbrute.py and all.txt
+python ~/Tool/massdns/scripts/subbrute.py ~/wordlist/all.txt $1 >> $1.subbrute  # set the path of subbrute.py and all.txt
 massdns -r ~/Tool/massdns/lists/resolvers.txt -t A -o S $1.subbrute -w $1.subbrute.A2 &>/dev/null   # set the path of your resolver.txt
 cat $1.subbrute.A2 | grep CNAME > $1.subbrute.CNAME2
 awk -F " " '{print $1;}' $1.subbrute.A2 > $1.subbrute.A3
