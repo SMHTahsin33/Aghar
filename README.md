@@ -1,16 +1,16 @@
 # Aghar
 A tool for Active, Passive, Peramuted Subdomain Enumeration
 
-Subenum
+Subenum: 
 https://github.com/bing0o/SubEnum
 
-MAssDns
+MAssDns: 
 https://github.com/blechschmidt/massdns
 
-AltDns
+AltDns: 
 https://github.com/infosec-au/altdns/
 
-all.txt
+All.txt: 
 https://gist.github.com/jhaddix/f64c97d0863a78454e44c2f7119c2a6a
 
 ![Aghar Description](/aghar.png)
