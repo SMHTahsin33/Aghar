@@ -45,7 +45,7 @@ echo "[*] 2. replace path of all.txt"
 echo "[*] 3. replace path of words.txt"
 
 echo " "
-echo "[#] Check the script I have commented those lines"
+echo "[#] Check this script I have commented those lines"
 
 echo "  "
 echo -e "${Gcyan}[*] Doing Passive Enumeration${STOP}"
