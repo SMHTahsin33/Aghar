@@ -47,6 +47,9 @@ echo "[*] 3. replace path of words.txt"
 echo " "
 echo "[#] Check this script I have commented those lines"
 
+echo " "
+echo "[#] Go for some coffee it will take a while depending on your target"
+
 echo "  "
 echo -e "${Gcyan}[*] Doing Passive Enumeration${STOP}"
 subenum -d $1 &>/dev/null
