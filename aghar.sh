@@ -58,6 +58,14 @@ sed s/.$// $1.permutation.CNAME2 > $1.permutation.CNAME
 echo " "
 echo -e "${Gcyan}[*] Gathering Active & Passive Permuted Subdomains Together${STOP}"
 cat $1.active.passive $1.permutation.resolve | sort -u > $1.final.resolved
+
+echo " "
+echo -e "${Gcyan}[*] Generating IP list so you can scan them with Masscan or Nmap${STOP}"
+massdns -r ~/Tool/massdns/lists/resolvers.txt -t A -o S $1.final.resolved -w $1.final.resolved.ip  &>/dev/null # set the path of your resolver.txt
+cat $1.final.resolved.ip | awk '{print $3}' | sort -u | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" > $1.final.ip
+
+echo " "
+echo -e "${Gcyan}[*] Generating CNAME list so you can run subdomain takeover tools${STOP}"
 cat $tfile.CNAME $1.subbrute.CNAME $1.permutation.CNAME | sort -u > $1.final.CNAME
 
 echo " "
@@ -80,6 +88,7 @@ rm $1.active.passive
 rm $1.subbrute.CNAME2
 rm $1.subbrute.CNAME3
 rm $1.permutation.CNAME
+rm $1.final.resolved.ip
 rm $1.permutation.CNAME3
 rm $1.permutation.CNAME2
 rm $1.permutation.resolve
