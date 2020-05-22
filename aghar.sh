@@ -22,7 +22,7 @@ echo -e "${STOP}"
 
 #Checking all requirments
 echo " "
-echo "[#] Checking all necessary tools installed or not"
+echo -e "${Gcyan}[#] Checking all necessary tools installed or not${STOP}"
 
 echo " "
 type -P subenum &>/dev/null && echo "[*] SubEnum     YES" || echo "[*] SubEnum     NO"
@@ -33,11 +33,11 @@ type -P amass &>/dev/null && echo "[*] Amass       YES" || echo "[*] Amass      
 type -P massdns &>/dev/null && echo "[*] MassDns     YES" || echo "[*] MassDns     NO"
 type -P altdns &>/dev/null && echo "[*] AltDns      YES" || echo "[*] AltDns      NO"
 echo " "
-echo "[*] Check all.txt yourself"
+echo -e "${Gcyan}[*] Check all.txt yourself${STOP}"
 
 #TODO
 echo " "
-echo "[#] To see this tool on work you have to do"
+echo -e "${Gcyan}[#] To see this tool on work you have to do${STOP}"
 
 echo " "
 echo "[*] 1. replace path of resolver.txt"
@@ -45,10 +45,10 @@ echo "[*] 2. replace path of all.txt"
 echo "[*] 3. replace path of words.txt"
 
 echo " "
-echo "[#] Check this script I have commented those lines"
+echo -e "${Gcyan}[#] Check this script I have commented those lines${STOP}"
 
 echo " "
-echo "[#] Go for some coffee it will take a while depending on your target"
+echo -e "${Gcyan}[#] Go for some coffee it will take a while depending on your target${STOP}"
 
 echo "  "
 echo -e "${Gcyan}[*] Doing Passive Enumeration${STOP}"
