@@ -19,6 +19,34 @@ echo "[*] A Tool for Active, Passive and Permuted Subdomain Enumeration"
 echo "[*] Author Mehedi Hasan Remon (@mehedi1194)"
 echo -e "${STOP}"
 #INTRO ENDS
+
+#Checking all requirments
+echo " "
+echo "[#] Checking all necessary tools installed or not"
+
+echo " "
+type -P subenum &>/dev/null && echo "[*] SubEnum     YES" || echo "[*] SubEnum     NO"
+type -P assetfinder &>/dev/null && echo "[*] Assetfinder YES" || echo "[*] Assetfinder NO"
+type -P findomain &>/dev/null && echo "[*] Findomain   YES" || echo "[*] Findomain   NO"
+type -P subfinder &>/dev/null && echo "[*] Subfinder   YES" || echo "[*] Subfinder   NO"
+type -P amass &>/dev/null && echo "[*] Amass       YES" || echo "[*] Amass       NO"
+type -P massdns &>/dev/null && echo "[*] MassDns     YES" || echo "[*] MassDns     NO"
+type -P altdns &>/dev/null && echo "[*] AltDns      YES" || echo "[*] AltDns      NO"
+echo " "
+echo "[*] Check all.txt yourself"
+
+#TODO
+echo " "
+echo "[#] To see this tool on work you have to do"
+
+echo " "
+echo "[*] 1. replace path of resolver.txt"
+echo "[*] 2. replace path of all.txt"
+echo "[*] 3. replace path of words.txt"
+
+echo " "
+echo "[#] Check the script I have commented those lines"
+
 echo "  "
 echo -e "${Gcyan}[*] Doing Passive Enumeration${STOP}"
 subenum -d $1 &>/dev/null
