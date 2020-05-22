@@ -1,10 +1,10 @@
 # Aghar
 A tool for Active, Passive, Peramuted Subdomain Enumeration
 
-Subenum: 
+SubEnum: 
 https://github.com/bing0o/SubEnum
 
-MAssDns: 
+MassDns: 
 https://github.com/blechschmidt/massdns
 
 AltDns: 
