@@ -1,5 +1,9 @@
 #!/bin/bash
 # USING ANSI COLORS
+DO="\e[0;49;95m"
+PINK="\e[0;49;35m"
+RED="\e[0;49;31m"
+GREEN="\e[0;49;91m"
 Gcyan="\e[0;49;33m"
 Cyan="\e[0;49;36m"
 STOP="\e[0m"
@@ -22,33 +26,33 @@ echo -e "${STOP}"
 
 #Checking all requirments
 echo " "
-echo "[#] Checking all necessary tools installed or not"
+echo -e "${Gcyan}[#] Checking all necessary tools installed or not${STOP}"
 
 echo " "
-type -P subenum &>/dev/null && echo "[*] SubEnum     YES" || echo "[*] SubEnum     NO"
-type -P assetfinder &>/dev/null && echo "[*] Assetfinder YES" || echo "[*] Assetfinder NO"
-type -P findomain &>/dev/null && echo "[*] Findomain   YES" || echo "[*] Findomain   NO"
-type -P subfinder &>/dev/null && echo "[*] Subfinder   YES" || echo "[*] Subfinder   NO"
-type -P amass &>/dev/null && echo "[*] Amass       YES" || echo "[*] Amass       NO"
-type -P massdns &>/dev/null && echo "[*] MassDns     YES" || echo "[*] MassDns     NO"
-type -P altdns &>/dev/null && echo "[*] AltDns      YES" || echo "[*] AltDns      NO"
+type -P subenum &>/dev/null && echo -e "${GREEN}[*] SubEnum     YES${STOP}" || echo -e "${RED}[*] SubEnum     NO${STOP}"
+type -P assetfinder &>/dev/null && echo -e "${GREEN}[*] Assetfinder YES${STOP}" || echo -e "${RED}[*] Assetfinder NO${STOP}"
+type -P findomain &>/dev/null && echo -e "${GREEN}[*] Findomain   YES${STOP}" || echo -e "${RED}[*] Findomain   NO${STOP}"
+type -P subfinder &>/dev/null && echo -e "${GREEN}[*] Subfinder   YES${STOP}" || echo -e "${RED}[*] Subfinder   NO${STOP}"
+type -P amass &>/dev/null && echo -e "${GREEN}[*] Amass       YES${STOP}" || echo -e "${RED}[*] Amass       NO${STOP}"
+type -P massdns &>/dev/null && echo -e "${GREEN}[*] MassDns     YES${STOP}" || echo -e "${RED}[*] MassDns     NO${STOP}"
+type -P altdns &>/dev/null && echo -e "${GREEN}[*] AltDns      YES${STOP}" || echo -e "${RED}[*] AltDns      NO${STOP}"
 echo " "
-echo "[*] Check all.txt yourself"
+echo -e "${Gcyan}[*] Check all.txt yourself${STOP}"
 
 #TODO
 echo " "
-echo "[#] To see this tool on work you have to do"
+echo -e "${DO}[#] The Followings Has To Be Done , Before Launching The Tool :${STOP}"
 
 echo " "
-echo "[*] 1. replace path of resolver.txt"
-echo "[*] 2. replace path of all.txt"
-echo "[*] 3. replace path of words.txt"
+echo -e "${PINK}[*] 1. Replace The Path of 'resolver.txt'${STOP}"
+echo -e "${PINK}[*] 2. Replace The Path of 'all.txt'${STOP}"
+echo -e "${PINK}[*] 3. Replace The Path of 'words.txt'${STOP}"
 
 echo " "
-echo "[#] Check this script I have commented those lines"
+echo -e "${DO}[#] Check this script I have commented those lines${STOP}"
 
 echo " "
-echo "[#] Go for some coffee it will take a while depending on your target"
+echo -e "${DO}[#] Go for some coffee it will take a while depending on your target${STOP}"
 
 echo "  "
 echo -e "${Gcyan}[*] Doing Passive Enumeration${STOP}"
